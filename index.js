@@ -37,12 +37,12 @@ app.post("/category/add", (req, res) => {
       res.send({ status: 0, data: category });
     })
     .catch((error) => {
-      console.error("添加分类异常", error);
-      res.send({ status: 1, msg: "添加分类异常, 请重新尝试" });
+      console.error("Add Category Error", error);
+      res.send({ status: 1, msg: "Add Category Error" });
     });
 });
 
-// // 获取分类列表
+// // Get Category Error
 // router.get("/manage/category/list", (req, res) => {
 //   const parentId = req.query.parentId || "0";
 //   CategoryModel.find({ parentId })
@@ -50,12 +50,12 @@ app.post("/category/add", (req, res) => {
 //       res.send({ status: 0, data: categorys });
 //     })
 //     .catch((error) => {
-//       console.error("获取分类列表异常", error);
-//       res.send({ status: 1, msg: "获取分类列表异常, 请重新尝试" });
+//       console.error("Get Category Error", error);
+//       res.send({ status: 1, msg: "Get Category Error" });
 //     });
 // });
 
-// // 更新分类名称
+// // Update Category Error
 // router.post("/manage/category/update", (req, res) => {
 //   const { categoryId, categoryName } = req.body;
 //   CategoryModel.findOneAndUpdate({ _id: categoryId }, { name: categoryName })
@@ -63,8 +63,8 @@ app.post("/category/add", (req, res) => {
 //       res.send({ status: 0 });
 //     })
 //     .catch((error) => {
-//       console.error("更新分类名称异常", error);
-//       res.send({ status: 1, msg: "更新分类名称异常, 请重新尝试" });
+//       console.error("Update Category Error", error);
+//       res.send({ status: 1, msg: "Update Category Error" });
 //     });
 // });
 
